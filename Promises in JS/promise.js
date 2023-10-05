@@ -1,13 +1,23 @@
 //creating promise object from Promise CONSTRUCTOR it takes a callback function 2 parameter resolve and reject
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 let request=new Promise((resolve,reject)=>{
     setTimeout(()=>{
         console.log("Promise Initiated")
-        resolve('Promise resolved') //here what will be mentioned will be inside Promise ->[[PromiseResult]]:"Promise resolved"
-       
+        reject('Promise Rejected') //here what will be mentioned will be inside Promise ->[[PromiseResult]]:"Promise resolved"
     }, 2000)
-  
 })
+setTimeout(()=>{
+    console.log(request)
+},2000)
+//The above will give this op
+/* Promise Initiated
+Promise {<rejected>: 'Promise Rejected'}
+[[Prototype]]: Promise
+[[PromiseState]]: "rejected"
+[[PromiseResult]]: "Promise Rejected"
 
+`THIS WILL GIVE ERROR IN "RED" COLOR -->Uncaught (in promise) Promise Rejected */
+//The above error in red  is by given by browser.IF we want to anything with this error or rejcted promise OR access PromiseResult of rejected promise
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 // let request=new Promise((resolve,reject)=>{
@@ -26,12 +36,12 @@ let request=new Promise((resolve,reject)=>{
 // request.then((value)=>{
 //     console.log(value)  //this will give value stored inside [[PromiseResult]] i.e--> "Promise resolved"
 // })
+/*setTimeout(()=>{
+    console.log(request)
+},2000) */
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-setTimeout(()=>{
-    console.log(request)
-},2000)
 
 //The above will give op as
 /*Promise Initiated  first promise obj then settimeout request console
@@ -87,7 +97,7 @@ THEN AFTER 2 SECOND IT WILL GIVE "Promise Initiated"*/
 
 
 
-//Nomral javascript object
+//Normal javascript object
 // function Fru(name,color){
 //     this.name=name;
 //     this.color=color;
