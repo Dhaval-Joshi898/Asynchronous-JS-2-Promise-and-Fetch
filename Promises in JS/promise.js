@@ -4,7 +4,7 @@ let request=new Promise((resolve,reject)=>{
         console.log("Promise Initiated")
         resolve('Promise resolved') //here what will be mentioned will be inside Promise ->[[PromiseResult]]:"Promise resolved"
        
-    },2000)
+    }, 2000)
   
 })
 
