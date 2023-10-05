@@ -24,6 +24,7 @@ request.catch((err)=>{
     // alert('request declined')
    
 })
+//finally
 
 
 
