@@ -9,11 +9,50 @@ console.log(value)
 // console.log(value)
 
 
-function Fru(name,color){
-    this.name=name;
-    this.color=color;
-}
 
-let fru1=new Fru('apple','red')
-console.log(fru1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Nomral javascript object
+// function Fru(name,color){
+//     this.name=name;
+//     this.color=color;
+// }
+
+// let fru1=new Fru('apple','red')
+// console.log(fru1)
 
