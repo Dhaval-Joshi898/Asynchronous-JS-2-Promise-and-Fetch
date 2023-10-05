@@ -1,13 +1,7 @@
-let value=new Promise((resolve,reject)=>{
-    resolve('Fu')
-    
-});
-value.then((val)=>{
-    console.log(val);
-    console.log(value)
+//creating promise object from Promise CONSTRUCTOR it takes a callback function 2 parameter resolve and reject
+let request=new Promise((resolve,reject)=>{
+
 })
-
-
 
 
 
