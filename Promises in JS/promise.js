@@ -2,7 +2,7 @@
 let request=new Promise((resolve,reject)=>{
     setTimeout(()=>{
         console.log("Promise Initiated")
-        resolve('Promise resolved') //here what will be mentioned will be inside Promise ->[[PromiseResult]]:"Promise resolved"
+        resolve(1) //here what will be mentioned will be inside Promise ->[[PromiseResult]]:"Promise resolved"
        
     }, 2000)
   
@@ -12,6 +12,7 @@ let request=new Promise((resolve,reject)=>{
 request.then((value)=>{
     console.log(value)  //this will give value stored inside [[PromiseResult]] i.e--> "Promise resolved"
 })
+request.then((value)=>{console.log(value+1)})
 
 
 
