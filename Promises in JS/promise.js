@@ -2,34 +2,10 @@ let value=new Promise((resolve,reject)=>{
     resolve('Fu')
     
 });
-console.log(value) //this will give promise object
-// value.then((val)=>{
-//     console.log(val);
-// })
-// console.log(value)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+value.then((val)=>{
+    console.log(val);
+    console.log(value)
+})
 
 
 
