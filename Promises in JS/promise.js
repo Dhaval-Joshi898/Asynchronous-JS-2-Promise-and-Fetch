@@ -2,7 +2,7 @@ let value=new Promise((resolve,reject)=>{
     resolve('Fu')
     
 });
-console.log(value)
+console.log(value) //this will give promise object
 // value.then((val)=>{
 //     console.log(val);
 // })
