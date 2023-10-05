@@ -19,6 +19,11 @@ Promise {<rejected>: 'Promise Rejected'}
 `THIS WILL GIVE ERROR IN "RED" COLOR -->Uncaught (in promise) Promise Rejected */
 //The above error in red  is by given by browser.IF we want to anything with this error or rejcted promise OR access PromiseResult of rejected promise
 
+request.catch((err)=>{
+    console.log(err) // this will give Promise Rejected ONly
+    // alert('request declined')
+   
+})
 
 
 
