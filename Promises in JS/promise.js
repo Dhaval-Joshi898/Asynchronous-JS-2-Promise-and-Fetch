@@ -2,18 +2,31 @@
 let request=new Promise((resolve,reject)=>{
     setTimeout(()=>{
         console.log("Promise Initiated")
-        resolve(1) //here what will be mentioned will be inside Promise ->[[PromiseResult]]:"Promise resolved"
+        resolve('Promise resolved') //here what will be mentioned will be inside Promise ->[[PromiseResult]]:"Promise resolved"
        
     }, 2000)
   
 })
 
-//suppose if the resolve contains object or some values which i want to access so i can use the then() with the promise object to get the content inside the resolve()
-request.then((value)=>{
-    console.log(value)  //this will give value stored inside [[PromiseResult]] i.e--> "Promise resolved"
-})
-request.then((value)=>{console.log(value+1)})
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
+// let request=new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         console.log("Promise Initiated")
+//         resolve('Promise resolved') //here what will be mentioned will be inside Promise ->[[PromiseResult]]:"Promise resolved"
+       
+//     }, 2000)
+  
+// })
+
+
+
+
+//suppose if the resolve contains object or some values which i want to access so i can use the then() with the promise object to get the content inside the resolve()
+// request.then((value)=>{
+//     console.log(value)  //this will give value stored inside [[PromiseResult]] i.e--> "Promise resolved"
+// })
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 setTimeout(()=>{
