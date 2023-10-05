@@ -8,6 +8,7 @@ let request=new Promise((resolve,reject)=>{
 })
 setTimeout(()=>{
     console.log(request)
+    
 },2000)
 //The above will give this op
 /* Promise Initiated
@@ -19,12 +20,13 @@ Promise {<rejected>: 'Promise Rejected'}
 `THIS WILL GIVE ERROR IN "RED" COLOR -->Uncaught (in promise) Promise Rejected */
 //The above error in red  is by given by browser.IF we want to anything with this error or rejcted promise OR access PromiseResult of rejected promise
 
-request.catch((err)=>{
-    console.log(err) // this will give Promise Rejected ONly
+request.then((value)=>{
+    console.log("Request has been rejected") // this will give Promise Rejected ONly
     // alert('request declined')
    
+}).catch((err)=>{
+    console.log("reuqest rej")
 })
-//finally
 
 
 
