@@ -1,6 +1,8 @@
 //creating promise object from Promise CONSTRUCTOR it takes a callback function 2 parameter resolve and reject
 let request=new Promise((resolve,reject)=>{
-
+    setTimeout(()=>{
+        console.log("Promise initiated")
+    },2000)
 })
 
 
