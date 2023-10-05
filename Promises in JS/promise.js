@@ -6,7 +6,39 @@ let request=new Promise((resolve,reject)=>{
        
     },2000)
 })
-console.log(request)
+
+setTimeout(()=>{
+    console.log(request)
+},2000)
+
+//The above will give op as
+/*Promise Initiated  first promise obj then settimeout request console
+Promise {<fulfilled>: 'Promise resolved'}
+[[Prototype]]: Promise
+[[PromiseState]]:"fulfilled"
+[[PromiseResult]]: "Promise resolved"
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//console.log(request)
 
 /*Promise {<pending>}
 [[Prototype]]: Promise
