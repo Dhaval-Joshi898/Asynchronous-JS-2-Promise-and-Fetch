@@ -8,6 +8,18 @@ let request=new Promise((resolve,reject)=>{
 })
 console.log(request)
 
+/*Promise {<pending>}
+[[Prototype]]: Promise
+[[PromiseState]]: "fulfilled"
+[[PromiseResult]]: "UNDEFINED"
+THEN AFTER 2 SECOND IT WILL GIVE "Promise Initiated"*/
+
+
+// setTimeout(function(){
+//     console.log(request)
+// },1000)
+
+
 
 
 
