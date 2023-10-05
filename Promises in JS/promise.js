@@ -7,6 +7,9 @@ let request=new Promise((resolve,reject)=>{
     },2000)
 })
 
+//suppose if the resolve contains object or some values which i want to access so i can use the then() with the promise object to get the content inside the resolve()
+
+
 setTimeout(()=>{
     console.log(request)
 },2000)
