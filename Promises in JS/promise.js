@@ -1,10 +1,12 @@
 //creating promise object from Promise CONSTRUCTOR it takes a callback function 2 parameter resolve and reject
 let request=new Promise((resolve,reject)=>{
     setTimeout(()=>{
-        console.log("Promise initiated")
+        console.log("Promise Initiated")
+        resolve('Promise resolved') //here what will be mentioned will be inside Promise ->[[PromiseResult]]:"Promise resolved"
+       
     },2000)
 })
-
+console.log(request)
 
 
 
