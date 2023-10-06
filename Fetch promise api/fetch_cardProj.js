@@ -22,7 +22,9 @@ function getDetails(id) {
     .then((response) => {
         return response.json()  //.then is callback function it return
     }).then((value) => console.log(value)) //THis will give output as Javascript object
-
+    .catch((err)=>{
+        console.log('req rejected')
+    })
 }
 
-getDetails(2)
+getDetails(0)
