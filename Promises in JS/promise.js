@@ -25,7 +25,7 @@ request.then((value)=>{
     // alert('request declined')
    
 }).catch((err)=>{
-    console.log("reuqest rej")
+    console.log("request rej")
 })
 
 
