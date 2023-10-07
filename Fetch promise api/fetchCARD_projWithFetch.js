@@ -65,4 +65,4 @@ function cardData(data,position,className=''){  //it takes data and position(can
     //afterBegin--> to add data at start
     //beforEend-->to add data at end 
 }
-getDetails(2)
+getDetails(2)  // calling the main function
