@@ -1,34 +1,44 @@
 const divEle = document.querySelector('.card-container');
 
+function userData(url){
+    return fetch(url)
+    .then((response) => {
+        if (!response.ok) { 
+            throw new Error('Id does not match any data') //the throw works as a return keyword
+        }
+        return response.json()  //.then is callback function it return
+    })
+}
 function getDetails(id){
-
-    fetch(`https://dummyjson.com/users/${id}`)
-        .then((response) => {
-            if (!response.ok) { 
-                throw new Error('Id does not match any data') //the throw works as a return keyword
-            }
-            return response.json()  //.then is callback function it return
-        })
+//-------------------------/The below code is wriiten inside the function--------------------------------------------
+    // fetch(`https://dummyjson.com/users/${id}`)
+    //     .then((response) => {
+    //         if (!response.ok) { 
+    //             throw new Error('Id does not match any data') //the throw works as a return keyword
+    //         }
+    //         return response.json()  //.then is callback function it return
+    //     })
+//-------------------------------------------------------------------------------------------------------------------- 
+    userData(`https://dummyjson.com/users/${id}`)
         .then((user) => {
             // console.log(value)
             cardData(user,'beforeend')
-            return fetch(`https://dummyjson.com/users/${id-1}`)
-
-        }) //THis will give output as Javascript object
-
-        //now here the 2 fetch request accesing will start
-        .then((response) => {
-            if (!response.ok) { 
-                throw new Error('Id does not match any data') //the throw works as a return keyword
-            }
-            return response.json()  //.then is callback function it return
+            return userData(`https://dummyjson.com/users/${id-1}`)  //the other request with different id
         })
+
+//-------------------------/The below code is wriiten inside the function------------------------------------------------
+        //now here the 2 fetch request accesing will start
+        // .then((response) => {
+        //     if (!response.ok) { 
+        //         throw new Error('Id does not match any data') //the throw works as a return keyword
+        //     }
+        //     return response.json()  //.then is callback function it return
+        // })
+//------------------------------------------------------------------------------------------------------------------------
         .then((user) => {
             // console.log(value)
-            cardData(user,'afterbegin','other')
-            
-
-        }) //THis will give output as Javascript object
+            cardData(user,'afterbegin','other') //cardata function called
+        }) 
 
         //The message in trhow will be catch by below "NOTE:IF NOT USED THROW for CUSTOM ERROR MESSAGE IT WILL GIVE BY DEFAULT ERROR MESSAGE"
         .catch((err) => {
