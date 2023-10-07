@@ -26,5 +26,4 @@ function getDetails(id) {
         console.log('req rejected')
     })
 }
-
 getDetails(0)
