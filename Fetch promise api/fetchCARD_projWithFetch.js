@@ -4,8 +4,7 @@ function getDetails(id) {
 
     fetch(`https://dummyjson.com/users/${id}`)
         .then((response) => {
-            if (!response.ok) { //if the response object dont contain the data of the required ID ok:will be False.
-                //with the help of throw we can write the custom error message and using Error(construtor)
+            if (!response.ok) { 
                 throw new Error('Id does not match any data') //the throw works as a return keyword
             }
             return response.json()  //.then is callback function it return
@@ -13,11 +12,30 @@ function getDetails(id) {
         .then((user) => {
             // console.log(value)
             cardData(user,'beforeend')
+            return fetch(`https://dummyjson.com/users/${id-1}`)
+
         }) //THis will give output as Javascript object
 
         //The message in trhow will be catch by below "NOTE:IF NOT USED THROW for CUSTOM ERROR MESSAGE IT WILL GIVE BY DEFAULT ERROR MESSAGE"
         .catch((err) => {
-            // console.log(err)   //this will give the error message in normal form like a text message
+            console.error(err)  //this will give the message in red like an error in console
+        })
+        //now here the 2 fetch request accesing will start
+        .then((response) => {
+            if (!response.ok) { 
+                throw new Error('Id does not match any data') //the throw works as a return keyword
+            }
+            return response.json()  //.then is callback function it return
+        })
+        .then((user) => {
+            // console.log(value)
+            cardData(user,'afterbegin','other')
+            
+
+        }) //THis will give output as Javascript object
+
+        //The message in trhow will be catch by below "NOTE:IF NOT USED THROW for CUSTOM ERROR MESSAGE IT WILL GIVE BY DEFAULT ERROR MESSAGE"
+        .catch((err) => {
             console.error(err)  //this will give the message in red like an error in console
         })
 }
