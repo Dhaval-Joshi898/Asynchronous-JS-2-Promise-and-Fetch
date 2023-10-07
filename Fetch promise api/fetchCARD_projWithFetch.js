@@ -1,6 +1,6 @@
 const divEle = document.querySelector('.card-container');
 
-function getDetails(id) {
+function getDetails(id){
 
     fetch(`https://dummyjson.com/users/${id}`)
         .then((response) => {
