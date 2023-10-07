@@ -28,6 +28,8 @@ function getDetails(id) {
 
         return response.json()  //.then is callback function it return
     }).then((value) => console.log(value)) //THis will give output as Javascript object
+    
+    //The message in trhow will be catch by below "NOTE:IF NOT USED THROW for CUSTOM ERROR MESSAGE IT WILL GIVE BY DEFAULT ERROR MESSAGE"
     .catch((err)=>{
         console.log(err)   //this will give the error message in normal form like a text message
         console.error(err)  //this will give the message in red like an error in console
