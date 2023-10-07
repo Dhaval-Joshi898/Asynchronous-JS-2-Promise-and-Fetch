@@ -16,10 +16,6 @@ function getDetails(id) {
 
         }) //THis will give output as Javascript object
 
-        //The message in trhow will be catch by below "NOTE:IF NOT USED THROW for CUSTOM ERROR MESSAGE IT WILL GIVE BY DEFAULT ERROR MESSAGE"
-        .catch((err) => {
-            console.error(err)  //this will give the message in red like an error in console
-        })
         //now here the 2 fetch request accesing will start
         .then((response) => {
             if (!response.ok) { 
