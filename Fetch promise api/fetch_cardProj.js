@@ -18,6 +18,7 @@ function getDetails(id) {
     // response.then((value) => console.log(value))//this will give the Object form the above then if we return it
 
     //The above code can be wriiten in the form as mentioned BELOW .This is called Promise chaining
+    
     fetch(`https://dummyjson.com/users/${id}`)
         .then((response) => {
 
